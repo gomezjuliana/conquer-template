@@ -1,0 +1,85 @@
+/*# Base
+  – normalize.css
+  – layout.css
+  – typography.css
+
+# Components
+  – alerts.css
+  – buttons.css
+  – forms.css
+  – list.css
+  – nav.css
+  – tables.css
+
+# Modules
+  – aside.css
+  – footer.css
+  – header.css
+*/
+
+/* # Base
+   typography */
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.42857143;
+	color: #333;
+	font-size: 14px;
+}
+
+/* # Components
+   nav
+   buttons
+   forms */
+
+.nav {
+	display: none;
+}
+
+.btn {
+	border-radius: 5px;
+	text-align: center;
+	padding: 10px 30px;
+	font-size: 18px;
+	border: none;
+	color: #fff;
+}
+
+.btn-green {
+	background: #449D44;
+}
+
+.btn-blue {
+	background: #31B0D5;
+}
+
+.btn-red {
+	background: #C9302C;
+}
+
+.btn-grey {
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	color: #666;
+}
+
+.btn-darkgrey {
+	background: #262628;
+	border-radius: 10px;
+	border: 1px solid #fff;
+}
+
+.form {
+	background: rgba(242, 242, 242, 0.4);
+	color: #000;
+	border: none;
+	display: block;
+	width: 100%;
+	height: 34px;
+	font-size: 14px;
+	border-radius: 4px;
+	font-family: inherit; /* need this because form elements don't inherit FF unless you tell them*/
+}
+
+
