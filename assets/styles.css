@@ -301,3 +301,138 @@ hr {
 .copy a {
 	text-decoration: none;
 }
+
+@media (min-width: 600px){
+	/* # Components
+   nav
+   buttons
+   forms */
+
+   .btn {
+   	padding: 2% 5.5%;
+   }
+
+   .form {
+   	width: 95.6%;
+   	margin-bottom: 2.8%;
+   	padding: 1.1% 2.2%;
+   }
+
+   .f-text{
+   	padding-bottom: 13%;
+   } 
+
+   /* # Modules
+   sections
+   header
+   footer */
+
+   /*header*/
+   .header {
+   	height: 75vh;
+   }
+
+   .header .title {
+   	font-size: 4.375em;
+   }
+
+   .header .subtitle {
+   	font-size: 1.563em;
+   	margin-top: 2%;
+   }
+
+   .hgroup {
+   	padding: 24% 5% 18%;
+   }
+
+   /*sections*/
+   /*set-up*/
+   .sm-title {
+   	font-size: 1.250em;
+   }
+
+   .lorem-text {
+   	padding-bottom: 9.7%;
+   }
+
+   /*section 1*/
+   .three-cols {
+   	margin: 11.5% 20%;
+   }
+
+   .col-3 {
+   	margin-top: 8.4%;
+   }
+
+   /*section 2*/ 
+
+   .two-cols {
+   	margin: 15% 3.8%;
+   }
+
+   .col-2 .lorem-text {
+   	padding-bottom: 2.5%;
+   }
+
+   /*section 3*/
+   .four-cols {
+   	margin: 10% 0 0;
+   }
+
+   .col-4 {
+   	display: inline-block;
+   	width: 43.5%;
+   	vertical-align: top;
+   	margin: 0 3% 5%;
+   	padding-bottom: 3%;
+   }
+
+   /*section 4*/
+   .col-1 {
+   	margin: 0 2.5% 5%;
+   	padding-bottom: 3%;
+   }
+
+   .col-1 .sm-title {
+   	padding-left: 5%;
+   	padding-top: 5%;
+   }
+
+   .col-1 .lorem-text {
+   	padding-left: 5%;
+   	padding-bottom: 5%;
+   }
+
+   .col-1 .btn {
+   	margin-left: 5%;
+   }
+
+   /*contact*/
+   .contact-container {
+   	padding: 13.4% 2.5% 10%;
+   }
+
+   .contact .lorem-text {
+   	padding: 3.5% 2.6%;
+   	margin-bottom: 3.5%;
+   }
+
+   .btn-darkgrey {
+   	margin-top: 3.5%;
+   }
+
+   /*footer*/
+   .footer .title {
+   	margin-bottom: 4.2%;
+   	margin-top: 5.8%;
+   }
+
+   .footer .lorem-text {
+   	margin-bottom: 5%;
+   	padding-bottom: 0;
+   }
+
+   hr {
+   	margin-bottom: 3.4%;
+   }
+}
