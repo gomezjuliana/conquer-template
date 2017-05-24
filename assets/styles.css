@@ -436,3 +436,99 @@ hr {
    	margin-bottom: 3.4%;
    }
 }
+
+@media (min-width: 900px){
+	/* # Components
+   nav
+   buttons
+   forms */
+
+   .col-2 .btn-grey,
+   .col-1 .btn-grey,
+   .contact-container .btn-darkgrey {
+   	padding: 1.2% 3.7%;
+   }
+
+   .col-4 .btn-grey {
+   	padding: 2.6% 7.8%;
+   }
+
+   /*modules*/
+
+   .col .lorem-text {
+   	text-align: left;
+   }
+
+   /*section 1*/
+   .three-cols,
+   .two-cols {
+   	margin: 3.8% 6%;
+   }
+
+   .col-3 {
+   	display: inline-block;
+   	width: 30%;
+   	vertical-align: top;
+   	margin: 5% 1.49%;
+   	padding-bottom: 5%;
+   }
+
+   /*section 2*/
+   .col-2 {
+   	display: inline-block;
+   	width: 48%;
+   	vertical-align: top;
+   	margin-left: 0.8%;
+   	margin-right: 0.8%;
+   }
+
+   /*section 3*/
+   .col-4 {
+   	width: 29%;
+   	margin-left: 7%;
+   	margin-right: 7%;
+   	padding-bottom: 1%;
+   }
+
+   /*section 4*/
+   .col-1 {
+   	margin-left: 8.3%;
+   	margin-right: 8.3%;
+   }
+
+   /*contact*/
+   .contact {
+   	height: 75vh;
+   }
+   .contact-container {
+   	padding: 5% 10% 6.8%;
+   }
+
+   .contact .lorem-text {
+   	font-size: 1.125em;
+   }
+
+   .block-left {
+   	float: left;
+   	width: 47%;
+   }
+
+   .block-right {
+   	float: right;
+   	width: 50%;
+   }
+
+   .f-text {
+   	padding-bottom: 16.7%;
+   }
+
+   .form {
+   	font-size: 0.875em
+   }
+
+   /*footer*/
+   .footer {
+   	clear: both;
+   }
+
+}
