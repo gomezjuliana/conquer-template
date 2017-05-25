@@ -5,7 +5,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	line-height: 1.42857143;
 	color: #333;
-	font-size: 1em;
+	font-size: 14px;
 	margin: 0;
 }
 
@@ -21,8 +21,8 @@ body {
 .btn {
 	border-radius: 5px;
 	text-align: center;
-	padding: 3.5% 10.5%;
-	font-size: 1.286em;
+	padding: 10px 30px;
+	font-size: 18px;
 	border: none;
 	color: #fff;
 }
@@ -50,7 +50,7 @@ body {
 	background: #262628;
 	border-radius: 10px;
 	border: 1px solid #fff;
-	margin-top: 10%;
+	margin-top: 20px;
 }
 
 .form {
@@ -58,18 +58,16 @@ body {
 	color: #000;
 	border: none;
 	display: block;
-	width: 97%;
+	width: 92%;
 	font-size: 1em;
 	border-radius: 4px;
 	font-family: inherit; /* need this because form elements don't inherit FF unless you tell them*/
-	margin-bottom: 5%;
-	padding-left: 3%;
-	padding-top: 1.5%;
-	padding-bottom: 1.5%;
+	margin-bottom: 15px;
+	padding: 6px 12px; 
 }
 
 .f-text {
-	padding-bottom: 25%;
+	height: 120px;
 }
 
 ::-webkit-input-placeholder {
@@ -88,17 +86,19 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	text-align: center;
-	height: 50vh;
+	height: 262.5px;
 }
 
 .header .title {
-	font-size: 3.929em;
+	font-size: 55px;
 	color: #fff;
 	text-transform: uppercase;
 	text-shadow: 2px 2px #000;
 	font-weight: 500;
 	line-height: 1.1;
 	margin: 0;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 .header .subtitle {
@@ -112,14 +112,17 @@ body {
 }
 
 .hgroup {
-	padding: 23% 5%;
+	position: relative;
+	top: 75px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 /* sections */
 
 /*set-up*/
 .cols {
-	margin: 20% 5%;
+	margin: 70px 15px;
 
 }
 
@@ -130,34 +133,39 @@ body {
 
 .sm-title {
 	color: #666;
-	font-size: 1.429em;
+	font-size: 20px;
 	font-weight: 700;
 	line-height: 1.1;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .lorem-text {
-	padding-right: 7%;
-	padding-left: 7%;
-	padding-bottom: 12%;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-bottom: 35px;
+	margin-top: 15px;
 	margin-bottom: 0;
 	line-height: 1.6em;
-	font-size: 0.875em;
+	font-size: 14px;
 }
 
-.three-cols img {
+.foto {
 	width: 100%;
 }
 
-.col-3 {
-	margin-top: 5%;
-	padding-bottom: 10%;
-}
-
-.col a {
+.link {
 	text-decoration: none;
 }
 
 /* first section */
+.col-3 {
+	margin-bottom: 30px;
+	padding-bottom: 40px;
+}
+
 .green-text {
 	color: #178A27;
 }
@@ -167,13 +175,14 @@ body {
 }
 
 /*second section*/
-.two-cols img {
-	width: 100%;
+.col-2 {
+	margin-bottom: 30px;
+	padding-bottom: 25px;
 }
 
-.col-2 {
-	margin-bottom: 5%;
-	padding-bottom: 5%;
+.col-2 .lorem-text {
+	padding: 27px;
+	margin-top: 0;
 }
 
 /*services section*/
@@ -184,56 +193,66 @@ body {
 	background-size: cover;
 	text-align: center;
 	color: #fff;
+	height: 433px;
 }
 
 .services-banner .title {
 	text-shadow: 2px 2px #aaa;
-	margin-bottom: 6.7%;
-	font-size: 2.250em;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 36px;
 	font-weight: 500;
 	line-height: 1.1;
 }
 
 .services-banner .lorem-text {
-	font-size: 1.125em;
+	font-size: 18px;
 }
 
 .sb-text {
-	padding: 5% 2%;
+	position: relative;
+	top: 65px;
 }
 
 /*fourth section*/
-.col-1 img {
-	width: 100%;
-}
-
 .four-cols {
-	text-align: center;
-	margin-left: 9%;
-	margin-right: 9%;
+	margin: 60px 9% 25px;
 }
 
 .col-4 {
-	margin-bottom: 5%;
-	padding-bottom: 10%;
+	height: 500px;
+	margin-bottom: 30px;
 }
 
 .col-4 .lorem-text {
 	text-align: left;
+	padding: 10px 20px;
+}
+
+.col-4 .btn-grey {
+	margin-top: 15px;
+}
+
+/*section 5*/
+.one-col {
+	margin: 10px 15px 60px;
 }
 
 .col-1 {
 	text-align: left;
-	padding-bottom: 7%;
 }
 
-.col-1 .sm-title {
-	padding-left: 7%;
-	padding-top: 10%;
+.col-1 .box {
+	padding: 30px;
 }
 
-.col-1 .btn {
-	margin-left: 7%;
+.box .sm-title,
+.box .lorem-text {
+	padding: 0;
+}
+
+.box .btn-grey {
+	margin-top: 20px;
 }
 
 /*contact section*/
@@ -242,26 +261,32 @@ body {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	height: 710px;
+	padding-top: 80px;
+	padding-bottom: 60px;
 }
 
 .contact-container {
-	padding: 25% 5% 19%;
+	padding-right: 15px;
+	padding-left: 15px;
 }
 
 .contact .title {
 	color: #fff;
 	text-shadow: 2px 2px #333;
-	font-size: 2.250em;
+	font-size: 36px;
 	text-align: center;
 	font-weight: 500;
+	margin-top: 20px;
+	margin-bottom: 30px;
 }
 
 .contact .lorem-text {
 	background: rgba(242, 242, 242, 0.4);
 	border-radius: 5px;
-	font-size: 1em;
-	margin-bottom: 7%;
-	padding: 7% 5.2%;
+	font-size: 16px;
+	margin-bottom: 20px;
+	padding: 20px 15px;
 	text-align: center;
 }
 
@@ -272,34 +297,31 @@ body {
 
 .footer .title {
 	color: #666;
-	font-size: 2em;
+	font-size: 32px;
 	font-style: italic;
-	margin-bottom: 8%;
-	margin-top: 11%;
+	margin-bottom: 25px;
+	margin-top: 35px;
 	font-weight: 500;
 }
 
-.footer .lorem-text {
+.footer-text {
 	color: #999;
 	font-style: italic;
-	margin-bottom: 9.5%;
+	margin-bottom: 30px;
 }
 
-hr {
+.line {
 	border: 0;
 	border-top: 1px solid #eee;
-	margin-bottom: 6.3%;
+	margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 .copy {
 	color: #666;
-	font-size: 0.750em;
+	font-size: 12px;
 	margin-bottom: 30px;
 	margin-top: 10px;
-}
-
-.copy a {
-	text-decoration: none;
 }
 
 @media (min-width: 600px){
@@ -593,7 +615,7 @@ hr {
 
 	.big-group .sm-title,
 	.big-group .lorem-text {
-		padding: 0
+		padding: 0;
 	}
 
 	.big-group {
