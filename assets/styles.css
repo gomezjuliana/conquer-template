@@ -103,7 +103,7 @@ body {
 
 .header .subtitle {
 	color: #fff;
-	font-size: 1.786em;
+	font-size: 25px;
 	text-shadow: 1px 1px #333;
 	font-weight: 500;
 	line-height: 1.1;
@@ -330,19 +330,9 @@ body {
    buttons
    forms */
 
-   .btn {
-   	padding: 2% 5.5%;
-   }
-
    .form {
-   	width: 95.6%;
-   	margin-bottom: 2.8%;
-   	padding: 1.1% 2.2%;
+   		width: 96%;
    }
-
-   .f-text{
-   	padding-bottom: 13%;
-   } 
 
    /* # Modules
    sections
@@ -351,132 +341,67 @@ body {
 
    /*header*/
    .header {
-   	height: 75vh;
+   		height: 393.750px;
    }
 
    .header .title {
-   	font-size: 4.375em;
+   		font-size: 70px;
    }
 
    .header .subtitle {
-   	font-size: 1.563em;
-   	margin-top: 2%;
+   		margin-top: 10px;
+   		margin-bottom: 10px;
    }
 
    .hgroup {
-   	padding: 24% 5% 18%;
+   		top: 145px;
    }
 
    /*sections*/
-   /*set-up*/
-   .sm-title {
-   	font-size: 1.250em;
-   }
-
-   .lorem-text {
-   	padding-bottom: 9.7%;
-   }
 
    /*section 1*/
    .three-cols {
-   	margin: 11.5% 20%;
-   }
-
-   .col-3 {
-   	margin-top: 8.4%;
+   		margin: 70px 20%;
    }
 
    /*section 2*/ 
-
    .two-cols {
-   	margin: 15% 3.8%;
+   		margin: 0 22.5px 60px;
    }
 
-   .col-2 .lorem-text {
-   	padding-bottom: 2.5%;
+   /*services-banner*/
+   .services-banner {
+   		height: 349px;
    }
 
-   /*section 3*/
+	/*section 4*/
    .four-cols {
-   	margin: 10% 0 0;
+   		margin-left: 0;
+   		margin-right: 0;
+   		margin-bottom: 0;
    }
 
    .col-4 {
    	display: inline-block;
    	width: 43.5%;
    	vertical-align: top;
-   	margin: 0 3% 5%;
-   	padding-bottom: 3%;
+   	margin: 0 3% 30px;
+   	padding-bottom: 20px;
    }
 
-   /*section 4*/
-   .col-1 {
-   	margin: 0 2.5% 5%;
-   	padding-bottom: 3%;
-   }
-
-   .col-1 .sm-title {
-   	padding-left: 5%;
-   	padding-top: 5%;
-   }
-
-   .col-1 .lorem-text {
-   	padding-left: 5%;
-   	padding-bottom: 5%;
-   }
-
-   .col-1 .btn {
-   	margin-left: 5%;
+   .col-4 .lorem-text {
+   		margin-top: 0;
    }
 
    /*contact*/
-   .contact-container {
-   	padding: 13.4% 2.5% 10%;
-   }
-
-   .contact .lorem-text {
-   	padding: 3.5% 2.6%;
-   	margin-bottom: 3.5%;
-   }
-
-   .btn-darkgrey {
-   	margin-top: 3.5%;
-   }
-
-   /*footer*/
-   .footer .title {
-   	margin-bottom: 4.2%;
-   	margin-top: 5.8%;
-   }
-
-   .footer .lorem-text {
-   	margin-bottom: 5%;
-   	padding-bottom: 0;
-   }
-
-   hr {
-   	margin-bottom: 3.4%;
+   .contact {
+   		height: 610px;
    }
 }
 
 @media (min-width: 900px){
-	/* # Components
-   nav
-   buttons
-   forms */
-
-   .col-2 .btn-grey,
-   .col-1 .btn-grey,
-   .contact-container .btn-darkgrey {
-   	padding: 1.2% 3.7%;
-   }
-
-   .col-4 .btn-grey {
-   	padding: 2.6% 7.8%;
-   }
-
    /*modules*/
-
+   /*set-up*/
    .col .lorem-text {
    	text-align: left;
    }
@@ -484,7 +409,8 @@ body {
    /*section 1*/
    .three-cols,
    .two-cols {
-   	margin: 3.8% 6%;
+   	margin-left: 75px;
+   	margin-right: 75px;
    }
 
    .col-3 {
