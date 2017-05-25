@@ -490,99 +490,43 @@ body {
 @media (min-width: 1200px){
 	/*header*/
 	.header {
-		height: 60vh;
+		height: 614px;
 	}
 
 	.hgroup {
-		padding-top: 20%;
-	}
-
-	.header .subtitle {
-		margin-top: 1%;
+		top: 260px;
 	}
 
 	/* section 1*/
 	.three-cols,
 	.two-cols {
-		margin: 1.8% 1.3%;
+		margin: 70px 1% 0;
 	}
 
-	.col-3 {
-		padding-bottom: 2%;
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-
-	/* section 2*/
-	.col-2 {
-		padding-bottom: 2%;
-		margin-bottom: 2%;
-	}
-
-	/*services banner*/
-	.services-banner {
-		height: 33vh;
-	}
-
-	.services-banner .title {
-		margin-bottom: 2.7%;
+	.col-3 .sm-title {
+		text-align: left;
 	}
 
 	/*section 3*/
 	.col-4 {
 		width: 22%;
-		padding-bottom: 1%;
-		margin: 1% 1% 3%;
-	}
-
-	.four-cols {
-		margin-top: 3%;
+		margin: 20px 1%;
+		padding-bottom: 0;
 	}
 
 	/*section 4*/
 	.col-1 {
-		margin-left: 2.5%;
-		margin-right: 2.5%;
-		padding-bottom: 0;
-	}
-
-	.big-group .sm-title,
-	.big-group .lorem-text {
-		padding: 0;
-	}
-
-	.big-group {
-		padding: 3%;
-	}
-
-	.big-group .lorem-text {
-		padding-bottom: 2%;
-	}
-
-	.big-group .btn-grey {
-		margin-left: 0;
+		margin-left: 15px;
+		margin-right: 15px;
 	}
 
 	/*contact*/
-	.contact-container {
-		padding: 2.5% 20% 5%;
-	}
-
 	.contact {
-		height: 54vh;
+		height: 438px;
 	}
 
-	/*footer*/
-	.footer .title {
-		margin-top: 3%;
-		margin-bottom: 2.1%;
-	}
-
-	.footer .lorem-text {
-		margin-bottom: 2%;
-	}
-
-	hr {
-		margin-bottom: 1.75%;
+	.contact-container {
+		padding-left: 18.8%;
+		padding-right: 18.8%;
 	}
 }
