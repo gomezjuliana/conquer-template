@@ -431,6 +431,29 @@ body {
 }
 
 @media (min-width: 900px){
+	/*nav*/
+	.hamburger {
+		display: none;
+	}
+
+	.nav {
+		display: block;
+		background: #383E4C;
+		text-align: center;
+		position: fixed;
+		top: -15px;
+		width: 100%;
+	}
+
+	.nav-option {
+		display: inline-block;
+		width: auto;
+		height: auto;
+		padding: 15px 25px;
+		border: 1px solid #646d7c;
+		margin: 1%;
+	}
+
    /*modules*/
    /*set-up*/
    .col .lorem-text {
