@@ -6,22 +6,24 @@ function openMenu() {
 };
 
 // This changes the menu on scroll
-let divsToHighlight = ['about', 'home', 'services', 'contact'];
+let divsToHighlight = ['home', 'about', 'services', 'contact'];
 
-console.log(document.getElementById(divsToHighlight[0]));
+for (let x = 0; x < divsToHighlight.length; x++){
+	let element = document.getElementById(divsToHighlight[x]);
+	canISeeDiv(element, showfn, hidefn);
+	}
 
-function canISeeDiv(array, showfn, hidefn){
+function canISeeDiv(element, showfn, hidefn){
 	let isshown = false;
 	function check () {
-		for (let x = 0; x < array.length; x++){
-			if (match(pageBoundaries(), elementBoundaries(document.getElementById(array[x]))) !== isshown) {
-			isshown = !isshown;
-			isshown? showfn() : hidefn();
-			}
+		if (match(pageBoundaries(), elementBoundaries(element)) !== isshown) {
+		isshown = !isshown;
+		console.log(element, isshown)
+		isshown? showfn(element) : hidefn(element);
 		}
 	};
-	window.onscroll=window.onresize = check;
-	check();
+		window.onscroll=window.onresize = check;
+		check();
 }
 
 // This grabs the page boundaries
@@ -48,16 +50,15 @@ function match(a,b){
 	return a[0]<b[1] && a[1]>b[0];
 }
 
-function showfn(){
-		console.log('div in view!');
-		console.log(this);
-		document.getElementById('nav-ser').style.backgroundColor = "white";
+function showfn(element){
+		console.log(element, 'div in view!');
+		element.style.backgroundColor = "white";
 	}
 
-function hidefn(){
-		console.log('div gone away!');
-		document.getElementById('nav-ser').style.backgroundColor = "grey";
+function hidefn(element){
+		console.log(element, 'div gone away!');
+		element.style.backgroundColor = "grey";
 	}
 
-canISeeDiv(divsToHighlight, showfn, hidefn);
+
 
