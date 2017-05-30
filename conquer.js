@@ -6,12 +6,18 @@ function openMenu() {
 };
 
 // This changes the menu on scroll
-function canISeeDiv(element, showfn, hidefn){
+let divsToHighlight = ['about', 'home', 'services', 'contact'];
+
+console.log(document.getElementById(divsToHighlight[0]));
+
+function canISeeDiv(array, showfn, hidefn){
 	let isshown = false;
 	function check () {
-		if (match(pageBoundaries(), elementBoundaries(element)) !== isshown) {
+		for (let x = 0; x < array.length; x++){
+			if (match(pageBoundaries(), elementBoundaries(document.getElementById(array[x]))) !== isshown) {
 			isshown = !isshown;
 			isshown? showfn() : hidefn();
+			}
 		}
 	};
 	window.onscroll=window.onresize = check;
@@ -30,7 +36,6 @@ function pageBoundaries() {
 function elementBoundaries(element) {
 	let y = 0;
 	let h = element.offsetHeight;
-
 	while (element.offsetParent!==null){
 		y+= element.offsetTop;
 		element= element.offsetParent;
@@ -43,26 +48,16 @@ function match(a,b){
 	return a[0]<b[1] && a[1]>b[0];
 }
 
-canISeeDiv(
-	document.getElementById('services'),
-	function(){
+function showfn(){
 		console.log('div in view!');
+		console.log(this);
 		document.getElementById('nav-ser').style.backgroundColor = "white";
-	},
-	function(){
+	}
+
+function hidefn(){
 		console.log('div gone away!');
 		document.getElementById('nav-ser').style.backgroundColor = "grey";
 	}
-	);
 
-// canISeeDiv(
-// 	document.getElementById('contact'),
-// 	function(){
-// 		console.log('div in view!');
-// 		document.getElementById('nav-con').style.backgroundColor = "white";
-// 	},
-// 	function(){
-// 		console.log('div gone away!');
-// 		document.getElementById('nav-con').style.backgroundColor = "grey";
-// 	}
-// 	);
+canISeeDiv(divsToHighlight, showfn, hidefn);
+
