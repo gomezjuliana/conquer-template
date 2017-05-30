@@ -9,7 +9,7 @@ function openMenu() {
 function canISeeDiv(element, showfn, hidefn){
 	let isshown = false;
 	function check () {
-		if (match(pageRectangle(), elementRectangle(element)) !== isshown) {
+		if (match(pageBoundaries(), elementBoundaries(element)) !== isshown) {
 			isshown = !isshown;
 			isshown? showfn() : hidefn();
 		}
@@ -18,16 +18,19 @@ function canISeeDiv(element, showfn, hidefn){
 	check();
 }
 
-function pageRectangle() {
+// This grabs the page boundaries
+function pageBoundaries() {
 	let page = document.body;
 	let y = page.scrollTop;
 	let h = 'innerHeight' in window? window.innerHeight : page.clientHeight;
 	return [y, h+y];
 }
 
-function elementRectangle(element) {
+// This grabs the element boundaries
+function elementBoundaries(element) {
 	let y = 0;
 	let h = element.offsetHeight;
+
 	while (element.offsetParent!==null){
 		y+= element.offsetTop;
 		element= element.offsetParent;
@@ -35,16 +38,31 @@ function elementRectangle(element) {
 	return [y, y+h];
 }
 
+// This checks if there's a match between the two, meaning they're overlapping
 function match(a,b){
-	return a[1]<b[3] && a[3]>b[1];
+	return a[0]<b[1] && a[1]>b[0];
 }
 
 canISeeDiv(
 	document.getElementById('services'),
 	function(){
-		alert('div in view!');
+		console.log('div in view!');
+		document.getElementById('nav-ser').style.backgroundColor = "white";
 	},
 	function(){
-		alert('div gone away!');
+		console.log('div gone away!');
+		document.getElementById('nav-ser').style.backgroundColor = "grey";
 	}
 	);
+
+// canISeeDiv(
+// 	document.getElementById('contact'),
+// 	function(){
+// 		console.log('div in view!');
+// 		document.getElementById('nav-con').style.backgroundColor = "white";
+// 	},
+// 	function(){
+// 		console.log('div gone away!');
+// 		document.getElementById('nav-con').style.backgroundColor = "grey";
+// 	}
+// 	);
