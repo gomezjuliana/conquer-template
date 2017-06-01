@@ -6,12 +6,12 @@ function openMenu() {
 };
 
 // This changes the menu on scroll
+
 let divsToHighlight = ['home', 'about', 'services', 'contact'];
 
 for (let x = 0; x < divsToHighlight.length; x++){
 	let element = document.getElementById(divsToHighlight[x]);
-	document.defaultView.addEventListener('resize', () => canISeeDiv(element, showfn, hidefn));
-	document.defaultView.addEventListener('scroll', () => canISeeDiv(element, showfn, hidefn));
+	canISeeDiv(element, showfn, hidefn);
 	}
 
 function canISeeDiv(element, showfn, hidefn){
@@ -22,7 +22,8 @@ function canISeeDiv(element, showfn, hidefn){
 		isshown? showfn(element) : hidefn(element);
 		}
 	};
-		check();
+		document.defaultView.addEventListener('resize', () => check());
+		document.defaultView.addEventListener('scroll', () => check());
 }
 
 // This grabs the page boundaries
@@ -50,14 +51,14 @@ function match(a,b){
 }
 
 function showfn(element){
-	console.log('div is here!');
-	document.getElementById('nav-abo').style.backgroundColor = "white";
-}
+		console.log(element, 'div in view!');
+		element.style.backgroundColor = "white";
+	}
 
 function hidefn(element){
-	console.log('div gone away!');
-	element.style.backgroundColor = "grey";
-}
+		console.log(element, 'div gone away!');
+		element.style.backgroundColor = "grey";
+	}
 
 
 
