@@ -10,7 +10,8 @@ let divsToHighlight = ['home', 'about', 'services', 'contact'];
 
 for (let x = 0; x < divsToHighlight.length; x++){
 	let element = document.getElementById(divsToHighlight[x]);
-	canISeeDiv(element, showfn, hidefn);
+	document.defaultView.addEventListener('resize', () => canISeeDiv(element, showfn, hidefn));
+	document.defaultView.addEventListener('scroll', () => canISeeDiv(element, showfn, hidefn));
 	}
 
 function canISeeDiv(element, showfn, hidefn){
@@ -18,11 +19,9 @@ function canISeeDiv(element, showfn, hidefn){
 	function check () {
 		if (match(pageBoundaries(), elementBoundaries(element)) !== isshown) {
 		isshown = !isshown;
-		console.log(element, isshown)
 		isshown? showfn(element) : hidefn(element);
 		}
 	};
-		window.onscroll=window.onresize = check;
 		check();
 }
 
@@ -51,14 +50,14 @@ function match(a,b){
 }
 
 function showfn(element){
-		console.log(element, 'div in view!');
-		element.style.backgroundColor = "white";
-	}
+	console.log('div is here!');
+	document.getElementById('nav-abo').style.backgroundColor = "white";
+}
 
 function hidefn(element){
-		console.log(element, 'div gone away!');
-		element.style.backgroundColor = "grey";
-	}
+	console.log('div gone away!');
+	element.style.backgroundColor = "grey";
+}
 
 
 
