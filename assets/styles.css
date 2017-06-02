@@ -376,6 +376,16 @@ body {
    nav
    buttons
    forms */
+   .nav-open {
+   	margin-left: 26%;
+   	margin-right: 26%;
+   }
+
+   .nav {
+   	margin-left: 26%;
+   	margin-right: 26%;
+   }
+   
    .form {
    		width: 96%;
    }
@@ -458,6 +468,9 @@ body {
 		width: 100%;
 		z-index: 1;
 		padding-left: 0;
+		overflow: auto;
+		margin: 10px auto auto;
+		height: auto;
 	}
 
 	.nav-option {
