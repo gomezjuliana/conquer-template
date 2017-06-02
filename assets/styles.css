@@ -19,7 +19,14 @@ body {
 	height: 40px;
 }
 .nav {
-	display: none;
+	display: block;
+	overflow: hidden;
+	position: fixed;
+	top: 50px;
+	padding-left: 0;
+	margin: 0 15px;
+	height: 0;
+	transition: height 0.8s;
 }
 
 .nav-open {
@@ -30,6 +37,7 @@ body {
 	margin: 0 15px;
 	top: 50px;
 	z-index: 1;
+	height: 204px;
 }
 
 .nav-option {
@@ -55,10 +63,6 @@ body {
 
 .nav-option .link {
 	color: #fff;
-}
-
-.active {
-	background: white;
 }
 
 .btn {

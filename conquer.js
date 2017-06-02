@@ -81,4 +81,4 @@ backgroundsToParallax.forEach(function(el,index, array) {
 		elSelector.style.backgroundPositionY ='0';
 	}
 });
-};
+}
