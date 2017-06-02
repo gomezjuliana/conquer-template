@@ -7,6 +7,7 @@ body {
 	line-height: 1.42857143;
 	margin: 0;
 }
+
 /*#Components: nav, buttons, forms*/
 
 .hamburger {
@@ -103,7 +104,10 @@ body {
 ::-webkit-input-placeholder {
 	color: #000;
 }
+
 /*#Modules: sections, header, footer*/
+
+
 /*header*/
 
 .header {
@@ -138,7 +142,10 @@ body {
 	position: relative;
 	top: 75px;
 }
+
 /*sections*/
+
+
 /*set-up*/
 
 .cols {
@@ -173,6 +180,7 @@ body {
 .link {
 	text-decoration: none;
 }
+
 /*section 1*/
 
 .col-3 {
@@ -185,6 +193,7 @@ body {
 .blue-text {
 	color: #31B0D5;
 }
+
 /*section 2*/
 
 .col-2 {
@@ -195,6 +204,7 @@ body {
 	margin-top: 0;
 	padding: 27px;
 }
+
 /*services section*/
 
 .services-banner {
@@ -218,6 +228,7 @@ body {
 	position: relative;
 	top: 65px;
 }
+
 /*section 4*/
 
 .four-cols {
@@ -234,6 +245,7 @@ body {
 .col-4 .btn-grey {
 	margin-top: 15px;
 }
+
 /*section 5*/
 
 .one-col {
@@ -245,13 +257,13 @@ body {
 .col-1 .box {
 	padding: 30px;
 }
-.box .sm-title,
-.box .lorem-text {
+.box .sm-title, .box .lorem-text {
 	padding: 0;
 }
 .box .btn-grey {
 	margin-top: 20px;
 }
+
 /*contact section*/
 
 .contact {
@@ -281,6 +293,7 @@ body {
 	padding: 20px 15px;
 	text-align: center;
 }
+
 /*footer*/
 
 .footer {
@@ -313,7 +326,6 @@ body {
 }
 @media (min-width: 600px) {
 	/*#Components: nav, buttons, forms*/
-	
 	.nav-open {
 		margin-left: 26%;
 		margin-right: 26%;
@@ -327,7 +339,6 @@ body {
 	}
 	/*#Modules: sections, header, footer*/
 	/*header*/
-	
 	.header {
 		height: 393.750px;
 	}
@@ -343,22 +354,18 @@ body {
 	}
 	/*sections*/
 	/*section 1*/
-	
 	.three-cols {
 		margin: 70px 20%;
 	}
 	/*section 2*/
-	
 	.two-cols {
 		margin: 0 22.5px 60px;
 	}
 	/*services section*/
-	
 	.services-banner {
 		height: 349px;
 	}
 	/*section 4*/
-	
 	.four-cols {
 		margin-bottom: 0;
 		margin-left: 0;
@@ -375,14 +382,12 @@ body {
 		margin-top: 0;
 	}
 	/*contact section*/
-	
 	.contact {
 		height: 610px;
 	}
 }
 @media (min-width: 900px) {
 	/*nav*/
-	
 	.hamburger {
 		display: none;
 	}
@@ -412,14 +417,11 @@ body {
 	}
 	/*modules*/
 	/*set-up*/
-	
 	.col .lorem-text {
 		text-align: left;
 	}
 	/*section 1*/
-	
-	.three-cols,
-	.two-cols {
+	.three-cols, .two-cols {
 		margin-left: 75px;
 		margin-right: 75px;
 	}
@@ -431,7 +433,6 @@ body {
 		width: 30%;
 	}
 	/*section 2*/
-	
 	.col-2 {
 		display: inline-block;
 		margin-left: 0.8%;
@@ -440,7 +441,6 @@ body {
 		width: 48%;
 	}
 	/*services section*/
-	
 	.services-banner {
 		height: 313px;
 	}
@@ -448,7 +448,6 @@ body {
 		top: 85px;
 	}
 	/*section 4*/
-	
 	.four-cols {
 		text-align: center;
 	}
@@ -459,7 +458,6 @@ body {
 		width: 29%;
 	}
 	/*section 5*/
-	
 	.one-col {
 		margin-top: 0;
 	}
@@ -468,7 +466,6 @@ body {
 		margin-right: 75px;
 	}
 	/*contact*/
-	
 	.contact {
 		height: 437px;
 	}
@@ -490,14 +487,12 @@ body {
 		width: 47%;
 	}
 	/*footer*/
-	
 	.footer {
 		clear: both;
 	}
 }
 @media (min-width: 1200px) {
 	/*header*/
-	
 	.header {
 		height: 614px;
 	}
@@ -505,29 +500,24 @@ body {
 		top: 260px;
 	}
 	/* section 1*/
-	
-	.three-cols,
-	.two-cols {
+	.three-cols, .two-cols {
 		margin: 70px 1% 0;
 	}
 	.col-3 .sm-title {
 		text-align: left;
 	}
 	/*section 3*/
-	
 	.col-4 {
 		margin: 20px 1%;
 		padding-bottom: 0;
 		width: 22%;
 	}
 	/*section 4*/
-	
 	.col-1 {
 		margin-left: 15px;
 		margin-right: 15px;
 	}
 	/*contact*/
-	
 	.contact {
 		height: 438px;
 	}
