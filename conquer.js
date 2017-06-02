@@ -1,3 +1,6 @@
+const navChildren = document.querySelector('.nav').querySelectorAll('li');
+const page = document.body;
+
 // This opens and closes the menu with a click on screens less than 900px
 document.querySelector('.hamburger').addEventListener('click', openMenu);
 
@@ -5,11 +8,18 @@ function openMenu() {
 	document.querySelector('.nav').classList.toggle('nav-open');
 };
 
+// This closes the menu if you click anywhere other than .hamburger
+document.addEventListener('click', function(event) {
+	let isClickInside = document.querySelector('.hamburger').contains(event.target);
+	if (!isClickInside){
+		document.querySelector('.nav').classList.remove('nav-open');
+	}
+});
+
 // This changes the menu on scroll
 
 let current = '';
 let divsToHighlight = ['home', 'about', 'services', 'contact'];
-const navChildren = document.querySelector('.nav').querySelectorAll('li');
 
 for (let x = 0; x < divsToHighlight.length; x++){
 	let element = document.getElementById(divsToHighlight[x]);
@@ -31,7 +41,6 @@ function canISeeDiv(element, showfn){
 
 // This grabs the page boundaries
 function pageBoundaries() {
-	let page = document.body;
 	let y = page.scrollTop;
 	let h = 'innerHeight' in window? window.innerHeight : page.clientHeight;
 	return [y, h+y];
