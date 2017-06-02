@@ -64,4 +64,21 @@ function showfn(element){
 }
 
 
+// This adds a parallax effects to .header, .services and .contact
 
+let backgroundsToParallax = ['.header', '.services-banner', '.contact'];
+
+for (let y = 0; y < backgroundsToParallax.length; y++){
+	let bckEl = document.querySelector(backgroundsToParallax[y]).classList.value;
+	console.log(bckEl);
+	simpleParallax(bckEl);
+}
+
+function simpleParallax(bckEl){
+	document.defaultView.addEventListener('scroll', function(){
+		let scrolledHeight = window.pageYOffset;
+		let imgPos = scrolledHeight / 1.5 +'px';
+		console.log(document.querySelector(`.${bckEl}`));
+		document.querySelector(`.${bckEl}`).style.backgroundPositionY = imgPos;
+	})
+}
