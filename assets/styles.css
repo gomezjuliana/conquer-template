@@ -267,7 +267,7 @@ body {
 /*contact section*/
 
 .contact {
-	background-image: url("../assets/imgs/bg-3.jpg") center center / cover no-repeat;
+	background: url("../assets/imgs/bg-3.jpg") center center / cover no-repeat;
 	height: 710px;
 	padding-bottom: 60px;
 	padding-top: 80px;
