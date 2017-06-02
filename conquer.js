@@ -7,23 +7,26 @@ function openMenu() {
 
 // This changes the menu on scroll
 
+let current = '';
 let divsToHighlight = ['home', 'about', 'services', 'contact'];
+const navChildren = document.querySelector('.nav').querySelectorAll('li');
 
 for (let x = 0; x < divsToHighlight.length; x++){
 	let element = document.getElementById(divsToHighlight[x]);
-	canISeeDiv(element, showfn, hidefn);
+	canISeeDiv(element, showfn);
 	}
 
-function canISeeDiv(element, showfn, hidefn){
+function canISeeDiv(element, showfn){
 	let isshown = false;
 	function check () {
 		if (match(pageBoundaries(), elementBoundaries(element)) !== isshown) {
 		isshown = !isshown;
-		isshown? showfn(element) : hidefn(element);
+			if (isshown == true){showfn(element)};
 		}
 	};
-		document.defaultView.addEventListener('resize', () => check());
-		document.defaultView.addEventListener('scroll', () => check());
+		document.defaultView.addEventListener('resize', check);
+		document.defaultView.addEventListener('scroll', check);
+		check();
 }
 
 // This grabs the page boundaries
@@ -50,15 +53,15 @@ function match(a,b){
 	return a[0]<b[1] && a[1]>b[0];
 }
 
+// This changes the nav-bar background colours
 function showfn(element){
-		console.log(element, 'div in view!');
-		element.style.backgroundColor = "white";
+	current = element.id;
+	let id = element.id;
+	for (let i = 0; i< navChildren.length; i++){
+		navChildren[i].classList.remove('nav-option-current');
 	}
-
-function hidefn(element){
-		console.log(element, 'div gone away!');
-		element.style.backgroundColor = "grey";
-	}
+	document.getElementById(`nav-${current}`).classList.add('nav-option-current');
+}
 
 
 

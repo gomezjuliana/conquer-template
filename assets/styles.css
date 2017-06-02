@@ -45,6 +45,10 @@ body {
 	height: 20px;
 }
 
+.nav-option-current {
+	background: #49505F;
+}
+
 .nav-option:last-child {
 	border-bottom: none;
 }
