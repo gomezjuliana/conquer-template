@@ -18,7 +18,7 @@ for (let x = 0; x < divsToHighlight.length; x++){
 
 function canISeeDiv(element, showfn){
 	let isshown = false;
-	function check () {
+	function check() {
 		if (match(pageBoundaries(), elementBoundaries(element)) !== isshown) {
 		isshown = !isshown;
 			if (isshown == true){showfn(element)};
@@ -63,22 +63,22 @@ function showfn(element){
 	document.getElementById(`nav-${current}`).classList.add('nav-option-current');
 }
 
-
 // This adds a parallax effects to .header, .services and .contact
 
 let backgroundsToParallax = ['.header', '.services-banner', '.contact'];
 
-for (let y = 0; y < backgroundsToParallax.length; y++){
-	let bckEl = document.querySelector(backgroundsToParallax[y]).classList.value;
-	console.log(bckEl);
-	simpleParallax(bckEl);
-}
+window.addEventListener('scroll', parallaxScroll);
 
-function simpleParallax(bckEl){
-	document.defaultView.addEventListener('scroll', function(){
-		let scrolledHeight = window.pageYOffset;
-		let imgPos = scrolledHeight / 1.5 +'px';
-		console.log(document.querySelector(`.${bckEl}`));
-		document.querySelector(`.${bckEl}`).style.backgroundPositionY = imgPos;
-	})
-}
+function parallaxScroll(){
+let scrolledHeight = window.pageYOffset;
+backgroundsToParallax.forEach(function(el,index, array) {
+	let elSelector = document.querySelector(`${el}`);
+	let limit = elSelector.offsetTop+elSelector.offsetHeight;
+	if (scrolledHeight > elSelector.offsetTop && scrolledHeight <= limit){
+		elSelector.style.backgroundPositionY = (scrolledHeight - elSelector.offsetTop) / 1.5+'px';
+	}
+	else {
+		elSelector.style.backgroundPositionY ='0';
+	}
+});
+};
